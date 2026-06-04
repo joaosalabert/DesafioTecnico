@@ -6,7 +6,9 @@
     <title>Questão 4</title>
 </head>
 <script>
-    let fra = prompt("Frase:").toLowerCase().split(''); //Põe todas as letras da frase em minúsculo e separa elas em uma lista.
+    let fra = prompt("Frase:").toLowerCase().trim(); //Põe todas as letras da frase em minúsculo e tira os espaçoes em branco do final e começo da string.
+    fra = fra.split(' ');   //Separa pelos espaços em branco.
+    fra = fra.join(''); //Junta sem os espaços.
     let i=0;    //Índice inicial da lista.
     let j=(fra.length)-1;   //Índice final da lista.
     let pal = true;

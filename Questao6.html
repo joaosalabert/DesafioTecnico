@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+</head>
+<script>
+    const booksByCategory = [
+    {category: "Romance",
+     books: [
+        {title: "O Sol também é Uma Estrela",
+         author: "Nicola Yoon"
+        },
+        {title: "O Noivo da Minha Melhor Amiga",
+         author: "Emily Gin"
+        },
+        {title: "Orgulho e Preconceito",
+         author: "Jane Austen"
+        }
+    ]
+    }, 
+    {category: "Fantasia",
+     books: [
+        {title: "Harry Potter e a Pedra Filosofal",
+         author: "J.K. Rowling"
+        },
+        {title: "O Hobbit",
+         author: "J.R.R. Tolkien"
+        },
+        {title: "Eragon",
+         author: "Cristopher Paolini"
+        },
+        {title: "O Nome do Vento",
+         author: "Patrick Rothfuss"
+        }
+     ]
+    },
+    {category: "Suspense",
+     books: [
+        {title: "A Garota no Trem",
+         author: "Paula Hawkins"
+        },
+        {title: "O Silêncio dos Inocentes",
+         author: "Thomas Harris"
+        }
+     ]
+    },
+    {category: "Ficção Científica",
+     books: [
+        {title: "Duna",
+         author: "Frank Herbert"
+        }, 
+        {title: "Neuromancer",
+         author: "William Gibson"
+        },
+        {title: "Fundação",
+         author: "Isaac Asimov"
+        },
+        {title: "1984",
+         author: "George Orwell"
+        },
+        {title: "O Fim da Infância",
+         author: "Arthur C. Clarke"
+        }
+     ]
+    }
+   ]
+    
+    function authors(booksByCategory){
+      let autores = []; //Inicializa o array que receberá os autores.
+      for (let i=0; i<booksByCategory.length; i++){   //Percorre por cada categoria.
+         for (let j=0; j<booksByCategory[i].books.length; j++){   //Percorre todos os livros pela categoria de índice i.
+            if (!autores.includes(booksByCategory[i].books[j].author)){ //Caso o autor não seja encontrada na lista...
+               autores.push(booksByCategory[i].books[j].author);  //O autor é adicionado à lista.
+            }
+         }
+      }
+      return autores;
+    }
+
+    let autores = authors(booksByCategory);
+    console.log(`Autores: ${autores}`);
+</script>
+</html>

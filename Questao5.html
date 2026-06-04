@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<script>
+    const booksByCategory = [
+    {category: "Romance",
+     books: [
+        {title: "O Sol também é Uma Estrela",
+         author: "Nicola Yoon"
+        },
+        {title: "O Noivo da Minha Melhor Amiga",
+         author: "Emily Gin"
+        },
+        {title: "Orgulho e Preconceito",
+         author: "Jane Austen"
+        }
+    ]
+    }, 
+    {category: "Fantasia",
+     books: [
+        {title: "Harry Potter e a Pedra Filosofal",
+         author: "J.K. Rowling"
+        },
+        {title: "O Hobbit",
+         author: "J.R.R. Tolkien"
+        },
+        {title: "Eragon",
+         author: "Cristopher Paolini"
+        },
+        {title: "O Nome do Vento",
+         author: "Patrick Rothfuss"
+        }
+     ]
+    },
+    {category: "Suspense",
+     books: [
+        {title: "A Garota no Trem",
+         author: "Paula Hawkins"
+        },
+        {title: "O Silêncio dos Inocentes",
+         author: "Thomas Harris"
+        }
+     ]
+    },
+    {category: "Ficção Científica",
+     books: [
+        {title: "Duna",
+         author: "Frank Herbert"
+        }, 
+        {title: "Neuromancer",
+         author: "William Gibson"
+        },
+        {title: "Fundação",
+         author: "Isaac Asimov"
+        },
+        {title: "1984",
+         author: "George Orwell"
+        },
+        {title: "O Fim da Infância",
+         author: "Arthur C. Clarke"
+        }
+     ]
+    }
+   ]
+    function countBooksInCategory(booksByCategory){
+        const qtd = {}; //Inicializa o objeto a ser retornado.
+        for (let i=0; i<booksByCategory.length; i++){
+            let cont = booksByCategory[i].books.length; //O tamanho da categoria é a quantidade de livros.
+            qtd[booksByCategory[i].category] = cont;    //Cria o elemento com o nome da categoria e atribui a quantidade de livros.
+        }
+        return qtd;
+    }
+    const qtd = countBooksInCategory(booksByCategory);
+    console.log(qtd);
+</script>
+</html>
